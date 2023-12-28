@@ -1,0 +1,24 @@
+{
+    "productos": [
+        {
+            "nombre": "Producto 1",
+            "apellido": "producto 2",
+            "tipo": "3"
+        },
+        {
+            "nombre": "Producto 1",
+            "apellido": "producto 2",
+            "tipo": "3"
+        },
+        {
+            "nombre": "Producto 1",
+            "apellido": "producto 2",
+            "tipo": "3"
+        },
+        {
+            "nombre": "Producto 1",
+            "apellido": "producto 2",
+            "tipo": "3"
+        }
+    ]
+}
