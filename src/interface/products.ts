@@ -5,10 +5,11 @@ export interface Product {
     head:         string;
     image:        string;
     name:         string;
-    release:      Release;
+    release?:      Release;
     tail:         string;
     type:         string;
-    id:           number;
+    id?:           number;
+    price:        number;
 }
 
 export interface Release {
@@ -23,5 +24,5 @@ export interface CartProduct {
     name: string;
     image: string;
     quantity: number;
-    // TODO PRICE
+    price: number;
 } 

@@ -10,7 +10,7 @@ export const initialState: CartState = {
 }
 
 export interface CartAction{
-    type: "ADD_TO_CART" | "REMOVE_FROM_CART";
+    type: "ADD_TO_CART" | "REMOVE_FROM_CART" | "CLEAR_CART";
     payload: CartProduct
 }
 
@@ -47,7 +47,7 @@ export const cartReducer = (state: CartState, action: CartAction): CartState => 
 
             if(itemToRemove){
                 if (itemToRemove.quantity === 1) {
-                    return {...state, cartItems: state.cartItems.filter((item) => item.id === removeItemID) 
+                    return {...state, cartItems: state.cartItems.filter((item) => item.id !== removeItemID) 
                 }
     
     
@@ -61,6 +61,13 @@ export const cartReducer = (state: CartState, action: CartAction): CartState => 
 
             return state;
         }   
+
+        case "CLEAR_CART": {
+            return{
+                ...state,
+                cartItems: []
+            }
+        }
 
         default: {
             return state;
